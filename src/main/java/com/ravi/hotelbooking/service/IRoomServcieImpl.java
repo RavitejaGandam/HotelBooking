@@ -17,7 +17,9 @@ import java.sql.SQLException;
 public class IRoomServcieImpl implements IRoomService {
     private final RoomRepository roomRepository;
     @Override
-    public Room addNewRoom(MultipartFile file, String roomType, BigDecimal roomPrice) throws IOException, SQLException {
+    public Room addNewRoom(MultipartFile file,
+                           String roomType,
+                           BigDecimal roomPrice) throws IOException, SQLException {
         Room room = new Room();
         room.setRoomType(roomType);
         room.setRoomPrice(roomPrice);
